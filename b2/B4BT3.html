@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1> Tính điểm DH khối D</h1>
+<div>Môn toán <input type="text"></div>
+<div>Môn văn <input type="text"></div>
+<div>Môn anh <input type="text"></div>
+<div>
+    khu vực
+    <select>
+        <option value="">KV1</option>
+        <option value="">KV2</option>
+        <option value="">KV2-NT</option>
+        <option value="">KV3</option>
+    </select>
+</div>
+<button onclick=" calculateScore()">Tính Điểm</button>
+<p id="rs"> </p>
+<body>
+    <script>
+        function calculateScore(){
+            let math = +document.getElementById('toan').value;
+            let literature = +document.getElementById('van').value;
+            let english = +document.getElementById('van').value;
+            let selected = document.getElementById('kv').value;
+            let result = math + literature + english
+        switch(selected){
+            case'KV1':
+            result+=0.75
+            break;
+            case'KV2':
+            result+=0.25
+            break;
+            case'KV2-NT':
+            result+=0.5
+            break;
+
+        }
+        document.getElementById('rs').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

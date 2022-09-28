@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let t = prompt("nhập số tháng:");
+      let n = prompt ("nhập số năm:")
+        if (t < 0 || t > 12) {
+            alert("nhập sai")
+        }
+        else if (t == 1 || t == 3 || t == 5 || t == 7 || t == 8 || t == 10 || t == 12) {
+            alert("31 ngày")
+        }
+        else if (t == 4 || t == 6 || t == 9 || t == 1) {
+            alert("30 ngày")
+        }
+        else {
+            if (n % 400 == 0 || (n % 4 == 0 && n % 100 != 0)) {
+                alert("29 ngày")
+            } else { alert("28 ngày") }
+        }
+
+    </script>
+</body>
+
+</html>
